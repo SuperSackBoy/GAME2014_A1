@@ -113,7 +113,7 @@ MonoBehaviour:
   minSpeed: 0.5
   minShootCooldown: 1
   maxShootCooldown: 3
-  hpDropChance: 0.529
+  hpDropChance: 0.1
   healthPrefab: {fileID: 4166985268230649794, guid: cc561af9160d096488aabcd53850ee66, type: 3}
   laserPrefab: {fileID: 4391939400536746642, guid: e2b3e0c3536bc8249a9188b2eb5f4dab, type: 3}
   laserSpawnPoint: {fileID: 4749065676343823173}
