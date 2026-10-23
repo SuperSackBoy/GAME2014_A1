@@ -792,10 +792,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 452080746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -75}
-  m_SizeDelta: {x: 0, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 150, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1000840989
 MonoBehaviour:
@@ -1325,6 +1325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1862070729}
   - component: {fileID: 1862070728}
+  - component: {fileID: 1862070730}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -1363,6 +1364,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1862070730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862070727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad3e42693ad441e95abc04395b5261f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupManager
+  pickupPrefab: {fileID: 4166985268230649794, guid: cc561af9160d096488aabcd53850ee66, type: 3}
+  pickupSpawnChance: 0.1
 --- !u!1 &2087713503
 GameObject:
   m_ObjectHideFlags: 0

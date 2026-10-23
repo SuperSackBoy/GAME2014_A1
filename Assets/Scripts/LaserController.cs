@@ -33,6 +33,7 @@ public class LaserController : MonoBehaviour {
 		}
 		else if (other.gameObject.CompareTag("Enemy") && laserType == LaserType.PlayerLaser) {
 			Destroy(other.gameObject);
+			PickupManager.Instance.SpawnPickup(other.transform.position);
 			Destroy(gameObject);
 		}
 	}

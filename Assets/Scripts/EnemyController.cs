@@ -7,8 +7,6 @@ public class EnemyController : MonoBehaviour {
 	[SerializeField] private float minSpeed;
 	[SerializeField] private float minShootCooldown;
 	[SerializeField] private float maxShootCooldown;
-	[SerializeField] [Range(0, 1)] private float hpDropChance;
-	[SerializeField] private GameObject healthPrefab;
 	
 	[SerializeField] GameObject laserPrefab;
 	[SerializeField] Transform laserSpawnPoint;
@@ -49,21 +47,9 @@ public class EnemyController : MonoBehaviour {
 			Destroy(gameObject);
 		}
 	}
-
-	private bool isQuitting = false;
-	private void OnApplicationQuit() {
-		isQuitting = true;
-	}
 	
 	private void OnDestroy() {
-		if (isQuitting) return;
 		GameManager.Instance?.AddScore(25);
 		SoundManager.Instance?.PlayEnemyDeathSound();
-		TrySpawnHealth();
-	}
-
-	private void TrySpawnHealth() {
-		if (Random.value > hpDropChance) return;
-		Instantiate(healthPrefab, transform.position, Quaternion.identity);
 	}
 }
