@@ -28,6 +28,10 @@ public class EnemySpawner : MonoBehaviour {
 
 	private void SpawnEnemy() {
 		currentSpawnCooldown = Random.Range(minSpawnCooldown, maxSpawnCooldown);
+		if (maxSpawnCooldown > minSpawnCooldown) {
+			maxSpawnCooldown -= 0.03f;
+			maxSpawnCooldown = Mathf.Max(maxSpawnCooldown, minSpawnCooldown);
+		}
 		
 		float spawnOnTop = Random.value > 0.5f ? 1 : -1;
 		float spawnX = Random.Range(-screenWidth, screenWidth);

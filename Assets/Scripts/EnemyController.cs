@@ -34,10 +34,6 @@ public class EnemyController : MonoBehaviour {
 		if (currentShootCooldown < 0 && transform.position.magnitude > 0.12f) {
 			Instantiate(laserPrefab, laserSpawnPoint.position, transform.rotation);
 			currentShootCooldown = Random.Range(minShootCooldown, maxShootCooldown);
-			if (maxShootCooldown > minShootCooldown) {
-				maxShootCooldown -= 0.03f;
-				maxShootCooldown = Mathf.Max(maxShootCooldown, minShootCooldown);
-			}
 		}
 	}
 
